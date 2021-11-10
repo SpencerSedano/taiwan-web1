@@ -6,6 +6,20 @@
 	font-family: "Montserrat", sans-serif, Helvetica;
 }
 
+/*Stop overscroll X because of the hamburger menu COMPUTER*/
+
+html,
+body {
+	max-width: 100%;
+	overflow-x: hidden;
+}
+
+/*Stop overscroll X because of the hamburger menu MOBILE*/
+
+body {
+	position: relative;
+}
+
 /*Setting the scroll effect, and hiding the horizontal scroll bar*/
 .container {
 	scroll-snap-type: y mandatory;
@@ -26,8 +40,31 @@ section {
 	gap: 24px;
 	width: 100vw;
 	height: 100vh;
-	background: url(background.png) no-repeat center;
+	background: url(images/background.png) no-repeat center;
 	background-size: cover;
+}
+
+/*Button back to top*/
+.to-top {
+	position: fixed;
+	bottom: 20px;
+	right: 30px;
+	width: 50px;
+	height: 50px;
+	text-decoration: none;
+	border-radius: 70%;
+	pointer-events: auto;
+	transition: all 0.4s;
+	cursor: pointer;
+	outline: none;
+	border: none;
+}
+.to-top i {
+	font-size: 3rem;
+}
+.to-top:hover {
+	background-color: #1d3557;
+	color: White;
 }
 
 /* .huge-image-container {
@@ -44,23 +81,25 @@ section {
 
 /*Logo and Menu Navigation*/
 .rectangle {
-	background: url(rectangle.png);
+	background: url(images/rectangle.png);
 	width: 100%;
 	grid-column: 1/13;
 	grid-row: 1/2;
 }
 header {
-	/* position: absolute;
-	top: 0%;
-	left: 6%; */
 	max-width: 100%;
 }
 
-.logo {
+.logo-container {
 	width: 332px;
 	height: 123px;
-	object-fit: cover;
 	margin-left: 5rem;
+}
+
+.logo {
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
 }
 
 .menu-container {
@@ -69,6 +108,7 @@ header {
 
 nav {
 	display: flex;
+	justify-content: space-around;
 	width: 100%;
 }
 
@@ -90,6 +130,72 @@ nav ul li a {
 	text-decoration: none;
 	color: #eee9e9;
 	font-weight: bold;
+}
+
+/*Burger Menu*/
+
+.burger {
+	display: none;
+	cursor: pointer;
+	align-self: center;
+}
+
+.burger div {
+	width: 25px;
+	height: 3px;
+	background-color: rgb(228, 226, 226);
+	margin: 5px;
+	transition: all 0.3s ease;
+}
+
+.nav-active {
+	transform: translateX(0%);
+}
+
+@media screen and (max-width: 768px) {
+	body {
+		overflow-x: hidden;
+	}
+	.burger {
+		display: block;
+	}
+	nav ul {
+		background-color: #1d3557;
+		position: absolute;
+		right: 0px;
+		height: 92vh;
+		top: 8vh;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		width: 50%;
+		transform: translateX(100%);
+		transition: transform 0.5s ease-in;
+	}
+	nav ul li {
+		opacity: 0;
+	}
+}
+
+@keyframes navLinkFade {
+	from {
+		opacity: 0;
+		transform: translateX(50px);
+	}
+	to {
+		opacity: 1;
+		transform: translateX(0px);
+	}
+}
+
+.toggle .line1 {
+	transform: rotate(-45deg) translate(-5px, 6px);
+}
+.toggle .line2 {
+	opacity: 0;
+}
+.toggle .line3 {
+	transform: rotate(45deg) translate(-5px, -6px);
 }
 
 /*Index Content*/
@@ -164,7 +270,7 @@ h3 {
 /*Index Content 2*/
 
 .rectangleblack {
-	background: url(rectangleblack.png);
+	background: url(images/rectangleblack.png);
 	grid-column: 1/13;
 	grid-row: 1/2;
 	text-align: center;
@@ -189,16 +295,17 @@ h3 {
 	grid-column: 3/7;
 	grid-row: 3/4;
 	color: #457b9d;
-	font-size: 4.4vw;
+	font-size: 4.5vw;
 }
 .content-paragraph-container {
 	grid-column: 3/7;
-	grid-row: 4/9;
-	background: rgb(134, 136, 131);
+	grid-row: 4/11;
+	/* background: rgb(134, 136, 131); */
 }
 .content-paragraph {
-	font-size: 1.2vw;
+	font-size: 2vmin;
 	font-weight: bold;
+	height: 100%;
 }
 .content-image-container {
 	grid-column: 8/11;
@@ -320,45 +427,45 @@ h3 {
 }
 /*Index3 More Images*/
 
-.image-container-taichung2 {
+.image-container-taitung {
 	grid-column: 3/5;
-	grid-row: 6/8;
+	grid-row: 4/5;
 	max-width: 342px;
 	height: 301px;
 	text-align: center;
 }
 
-.image-container-taipei2 {
+.image-container-hsinchu {
 	grid-column: 6/8;
-	grid-row: 6/8;
+	grid-row: 4/5;
 	max-width: 342px;
 	height: 301px;
 }
 
-.image-container-hualien2 {
+.image-container-nantou {
 	grid-column: 9/11;
-	grid-row: 6/8;
+	grid-row: 4/5;
 	max-width: 342px;
 	height: 301px;
 }
 
-.taichung-image2 {
+.taitung-image {
 	max-width: 100%;
 	height: 77%;
 	object-fit: fill;
 }
-.taipei-image2 {
+.hsinchu-image {
 	max-width: 100%;
 	height: 77%;
 	object-fit: fill;
 }
-.hualien-image2 {
+.nantou-image {
 	max-width: 100%;
 	height: 77%;
 	object-fit: fill;
 }
 
-.button-taichung2 {
+.button-taitung {
 	background: transparent;
 	width: 100%;
 	height: 63px;
@@ -372,12 +479,12 @@ h3 {
 	border: none;
 }
 
-.button-taichung2:hover {
+.button-taitung:hover {
 	box-shadow: inset 256px 0 0 0 black;
 	cursor: pointer;
 }
 
-.button-taipei2 {
+.button-hsinchu {
 	background: transparent;
 	width: 100%;
 	height: 63px;
@@ -391,12 +498,12 @@ h3 {
 	transition: ease-out 0.3s;
 	border: none;
 }
-.button-taipei2:hover {
+.button-hsinchu:hover {
 	box-shadow: inset 256px 0 0 0 black;
 	cursor: pointer;
 }
 
-.button-hualien2 {
+.button-nantou {
 	background: transparent;
 	width: 100%;
 	height: 63px;
@@ -410,7 +517,7 @@ h3 {
 	transition: ease-out 0.3s;
 	border: none;
 }
-.button-hualien2:hover {
+.button-nantou:hover {
 	box-shadow: inset 256px 0 0 0 black;
 	cursor: pointer;
 }
@@ -425,17 +532,20 @@ h3 {
 }
 
 .explore-heading {
-	grid-column: 7/12;
-	grid-row: 3/5;
+	grid-column: 1/13;
+	grid-row: 3/4;
+	text-align: center;
 }
 .explore-paragraph {
-	grid-column: 7/12;
-	grid-row: 7/10;
+	grid-column: 5/9;
+	grid-row: 4/5;
+	text-align: center;
 }
-
-.keep-scrolling {
-	grid-column: 9/11;
-	grid-row: 10/11;
+.arrow {
+	grid-column: 6/8;
+	grid-row: 5/6;
+	justify-self: center;
+	cursor: pointer;
 }
 
 /*Explore Page2*/
@@ -480,13 +590,81 @@ h3 {
 }
 
 @media screen and (max-width: 550px) {
+	html,
+	body {
+		max-width: 100%;
+		overflow-x: hidden;
+	}
+
+	section {
+		scroll-snap-align: unset;
+	}
 	.index-grid {
 		display: block;
+	}
+	.index-heading {
+		text-align: center;
+		font-size: 4rem;
+		overflow-wrap: break-word;
+	}
+	.index-paragraph {
+		text-align: center;
+		font-size: 1.5rem;
+		margin-bottom: 3rem;
+	}
+	.learn-more {
+		display: block;
+		margin: 0 auto;
+		font-size: 0.875rem;
+		margin-bottom: 1.5rem;
+	}
+	.popular-places {
+		display: block;
+		margin: 0 auto;
+		font-size: 0.875rem;
 	}
 	.index2-grid {
 		display: block;
 	}
+	.content-heading {
+		text-align: center;
+		font-size: 2.5rem;
+	}
+	.content-paragraph {
+		text-align: center;
+		font-size: 0.7rem;
+		padding: 1rem;
+	}
+	.content-image-container {
+		text-align: center;
+	}
+	.content-image {
+		width: 50%;
+		height: 250px;
+	}
 	.index3-grid {
 		display: block;
+	}
+	.content-heading2 {
+		text-align: center;
+		font-size: 2.5rem;
+	}
+	.image-container-taichung {
+		margin: 0 auto;
+	}
+	.image-container-taipei {
+		margin: 0 auto;
+	}
+	.image-container-hualien {
+		margin: 0 auto;
+	}
+	.image-container-taitung {
+		margin: 0 auto;
+	}
+	.image-container-hsinchu {
+		margin: 0 auto;
+	}
+	.image-container-nantou {
+		margin: 0 auto;
 	}
 }
