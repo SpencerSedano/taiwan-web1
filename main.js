@@ -1,53 +1,60 @@
-const heading = document.querySelector(".content-heading2");
-
-window.addEventListener("scroll", function () {
-	if (heading.getBoundingClientRect().top < window.innerHeight) {
-		heading.addEventListener("click", function () {
-			window.scrollTo(0, 0);
-			console.log("hello");
-		});
-	}
-});
-
 const toTop = document.querySelector(".to-top");
 
 toTop.onclick = function () {
-	console.log("SCROLLING...");
+	console.log("UPPPPPPPPPPPPPP...");
 	const firstPage = document.querySelector(".index-grid");
 	const pos = firstPage.getBoundingClientRect();
 	const sections = document.querySelector(".container");
 	sections.scrollTo(0, pos.top);
 };
 
-// function scrollToTop() {
-// 	// Scroll to top logic
-// 	rootElement.scrollTo({
-// 		top: 0,
-// 	});
-// }
+const learnMore = document.querySelector(".learn-more");
 
-// toTop.addEventListener("click", scrollToTop);
+learnMore.onclick = function () {
+	console.log("learn more functioning");
+	const secondPage = document.querySelector(".index2-grid");
+	const pos = secondPage.getBoundingClientRect();
+	const sections = document.querySelector(".container");
+	sections.scrollTo(0, pos.top);
+};
 
-// toTop.addEventListener("click", function () {
-// 	window.scrollTo(0, 0);
-// });
+const popularPlaces = document.querySelector(".popular-places");
 
-// We select the element we want to target
-// var target = document.querySelector("footer");
+popularPlaces.onclick = function () {
+	console.log("popular places functioning");
+	const thirdPage = document.querySelector(".index3-grid");
+	const pos = thirdPage.getBoundingClientRect();
+	const sections = document.querySelector(".container");
+	sections.scrollTo(0, pos.top);
+};
 
-// var scrollToTopBtn = document.querySelector(".to-top");
-// var rootElement = document.documentElement;
+const buttonTaichung = document.querySelector(".button-taichung");
+const buttonTaipei = document.querySelector(".button-taipei");
+const buttonHualien = document.querySelector(".button-hualien");
+const buttonTaitung = document.querySelector(".button-taitung");
+const buttonHsinchu = document.querySelector(".button-hsinchu");
+const buttonNantou = document.querySelector(".button-nantou");
 
-// // Next we want to create a function that will be called when that element is intersected
-// function callback(entries, observer) {
-// 	// The callback will return an array of entries, even if you are only observing a single item
-// 	entries.forEach((entry) => {
-// 		if (entry.isIntersecting) {
-// 			// Show button
-// 			scrollToTopBtn.classList.add("showBtn");
-// 		} else {
-// 			// Hide button
-// 			scrollToTopBtn.classList.remove("showBtn");
-// 		}
-// 	});
-// }
+buttonTaichung.onclick = function () {
+	alert("I haven't finished yet, sorry about that :(");
+};
+
+buttonTaipei.onclick = function () {
+	alert("I haven't finished yet, sorry about that :(");
+};
+
+buttonHualien.onclick = function () {
+	alert("I haven't finished yet, sorry about that :(");
+};
+
+buttonTaitung.onclick = function () {
+	alert("I haven't finished yet, sorry about that :(");
+};
+
+buttonHsinchu.onclick = function () {
+	alert("I haven't finished yet, sorry about that :(");
+};
+
+buttonNantou.onclick = function () {
+	alert("I haven't finished yet, sorry about that :(");
+};
