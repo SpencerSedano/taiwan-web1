@@ -852,6 +852,9 @@ form {
 	}
 
 	/*Map*/
+	.explore-grid {
+		height: 80vh;
+	}
 	.svg-container {
 		grid-column: 1/13;
 		grid-row: 2/5;
@@ -866,6 +869,10 @@ form {
 	/*Contact Page*/
 	.contact-grid {
 		display: block;
+		/* height: 80vh; */
+	}
+	.contact-heading {
+		margin-top: 2rem;
 	}
 	.contact-image-icon1,
 	.contact-image-icon2,
@@ -876,11 +883,13 @@ form {
 		display: none;
 	}
 	.container-form-grid {
-		height: 50%;
+		height: 50vh;
+		padding: 2rem;
 	}
+
 	.contact2-grid {
 		display: block;
-		height: 50vh;
+		/* height: 50vh; */
 	}
 	.me-image-container {
 		padding: 2rem;
