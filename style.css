@@ -851,6 +851,163 @@ form {
 	max-height: 100%;
 }
 
+@media screen and (max-height: 870px) {
+}
+
+@media (orientation: landscape) {
+	html,
+	body {
+		max-width: 100%;
+		overflow-x: hidden;
+	}
+
+	section {
+		scroll-snap-align: unset;
+	}
+	.index-grid {
+		display: block;
+	}
+	.index-heading {
+		text-align: center;
+		font-size: 4rem;
+		overflow-wrap: break-word;
+	}
+	.index-paragraph {
+		text-align: center;
+		font-size: 1.5rem;
+		margin-bottom: 3rem;
+	}
+	.learn-more {
+		display: block;
+		margin: 0 auto;
+		font-size: 0.875rem;
+		margin-bottom: 1.5rem;
+	}
+	.popular-places {
+		display: block;
+		margin: 0 auto;
+		font-size: 0.875rem;
+	}
+	.index2-grid {
+		display: block;
+		height: auto;
+	}
+	.content-heading {
+		text-align: center;
+		font-size: 2.5rem;
+	}
+	.content-paragraph {
+		text-align: center;
+		font-size: 0.7rem;
+		padding: 1rem;
+	}
+	.content-image-container {
+		text-align: center;
+	}
+	.content-image {
+		width: 50%;
+		height: 250px;
+	}
+	.index3-grid {
+		display: block;
+		height: auto;
+	}
+	.content-heading2 {
+		text-align: center;
+		font-size: 2.5rem;
+	}
+	.image-container-taichung {
+		margin: 0 auto;
+	}
+	.image-container-taipei {
+		margin: 0 auto;
+	}
+	.image-container-hualien {
+		margin: 0 auto;
+	}
+	.image-container-taitung {
+		margin: 0 auto;
+	}
+	.image-container-hsinchu {
+		margin: 0 auto;
+	}
+	.image-container-nantou {
+		margin: 0 auto;
+		margin-bottom: 1rem;
+	}
+	/*Index4*/
+	.index4-grid {
+		display: block;
+		height: auto;
+	}
+	.content-heading3 {
+		padding: 1rem;
+	}
+	.infographic-living {
+		padding: 1rem 0rem;
+	}
+	footer {
+		margin-top: 1rem;
+	}
+	/*Map*/
+	/* .explore-grid {
+		height: 80vh;
+	} */
+	/* .svg-container {
+		grid-column: 1/13;
+		grid-row: 2/5;
+	} */
+	/* .box {
+		grid-column: 1/13;
+		grid-row: 12 / auto;
+		box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+		margin-top: 2rem;
+	} */
+
+	/*Contact Page*/
+	.contact-grid {
+		display: block;
+		height: auto;
+		/* height: 80vh; */
+	}
+	.contact-heading {
+		margin-top: 2rem;
+	}
+	.contact-image-icon1,
+	.contact-image-icon2,
+	.contact-image-icon3,
+	.contact-icon1,
+	.contact-icon2,
+	.contact-icon3 {
+		display: none;
+	}
+	.container-form-grid {
+		height: 100%;
+		padding: 2rem;
+	}
+
+	.contact2-grid {
+		display: block;
+		height: auto;
+		/* height: 50vh; */
+	}
+	.me-image-container {
+		padding: 2rem;
+		height: 80vh;
+		object-fit: cover;
+	}
+	.chinese-name {
+		text-align: center;
+	}
+	.spanish-name {
+		text-align: center;
+		padding: 2rem;
+	}
+	p {
+		line-height: normal;
+	}
+}
+
 @media screen and (max-width: 550px) {
 	html,
 	body {
