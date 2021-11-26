@@ -557,14 +557,20 @@ footer {
 	grid-row: 8 / auto;
 	background-color: #eeeeee;
 	display: flex;
+	justify-content: space-around;
 	align-items: center;
 }
 
-footer li {
-	list-style: none;
+footer ul {
+	display: flex;
 }
 
-footer li a {
+footer ul li {
+	list-style: none;
+	margin-left: 2rem;
+}
+
+footer ul li a {
 	text-decoration: none;
 }
 
