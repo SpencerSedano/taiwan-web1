@@ -6,6 +6,10 @@
 	font-family: "Montserrat", sans-serif, Helvetica;
 }
 
+p {
+	line-height: 1.5rem;
+}
+
 a {
 	text-decoration: none;
 	color: white;
@@ -826,6 +830,7 @@ form {
 	grid-row: 3/4;
 	font-size: 4.5vw;
 	align-self: center;
+	line-height: normal;
 	transform: translateY(-70%);
 }
 .spanish-name {
@@ -833,6 +838,7 @@ form {
 	grid-row: 3/4;
 	font-size: 2.25vw;
 	align-self: center;
+	line-height: normal;
 }
 .me-image-container {
 	grid-column: 2/6;
@@ -958,6 +964,7 @@ form {
 	/*Contact Page*/
 	.contact-grid {
 		display: block;
+		height: auto;
 		/* height: 80vh; */
 	}
 	.contact-heading {
@@ -972,12 +979,13 @@ form {
 		display: none;
 	}
 	.container-form-grid {
-		height: 50vh;
+		height: 100%;
 		padding: 2rem;
 	}
 
 	.contact2-grid {
 		display: block;
+		height: auto;
 		/* height: 50vh; */
 	}
 	.me-image-container {
@@ -991,5 +999,8 @@ form {
 	.spanish-name {
 		text-align: center;
 		padding: 2rem;
+	}
+	p {
+		line-height: normal;
 	}
 }
