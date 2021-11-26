@@ -854,7 +854,7 @@ form {
 /* @media screen and (max-height: 870px) {
 } */
 
-@media (orientation: landscape) and (max-width: 800px) {
+@media screen and (max-height: 400px) {
 	html,
 	body {
 		max-width: 100%;
@@ -866,6 +866,7 @@ form {
 	}
 	.index-grid {
 		display: block;
+		height: auto;
 	}
 	.index-heading {
 		text-align: center;
