@@ -5,6 +5,7 @@
 		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<link rel="stylesheet" href="./style.css" />
+		<link rel="stylesheet" href="./slider.css" />
 		<title>All Taiwan</title>
 	</head>
 	<body>
@@ -61,7 +62,7 @@
 								id="message"
 								name="subject"
 								placeholder="Your message"
-								style="height: 100px"
+								style="height: 200px"
 							></textarea>
 
 							<input class="submit-button" type="submit" value="Submit" />
@@ -93,9 +94,45 @@
 						/></a>
 					</div>
 					<h2 class="contact2-heading">Personal Contact</h2>
-					<div class="me-image-container">
-						<img class="me-image" src="./images/spencersedano.jpg" alt="Yo" />
+
+					<div class="slider-container">
+						<div class="slider">
+							<div class="buttons">
+								<a href="#!" class="button" id="prev">prev</a>
+								<a href="#!" class="button" id="next">next</a>
+							</div>
+							<div class="slide" id="slide1">
+								<img
+									style="object-fit: contain; width: 100%; height: 100%"
+									src="./images/spencersedano.jpg"
+									alt="Yo"
+								/>
+							</div>
+							<div class="slide" id="slide2">
+								<img
+									style="object-fit: contain; width: 100%; height: 100%"
+									src="./images/rainbow.JPG"
+									alt="Yo"
+								/>
+							</div>
+							<!-- <div class="slide" id="slide3">
+								<iframe
+									width="560"
+									height="315"
+									src="https://www.youtube.com/embed/OTiFcaxNWec"
+									title="YouTube video player"
+									frameborder="0"
+									allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+									allowfullscreen
+								></iframe>
+							</div> -->
+							<!--    Add as many slides as you like    -->
+						</div>
 					</div>
+
+					<!-- <div class="me-image-container">
+						<img class="me-image" src="./images/spencersedano.jpg" alt="Yo" />
+					</div> -->
 					<p class="chinese-name">余思遠</p>
 					<p class="spanish-name">Spencer Sedano</p>
 					<footer>
@@ -112,6 +149,6 @@
 				</section>
 			</main>
 		</div>
-		<script src="script.js"></script>
+		<script src="slider.js"></script>
 	</body>
 </html>
